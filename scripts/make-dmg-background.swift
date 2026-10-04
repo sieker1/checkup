@@ -96,7 +96,7 @@ func makeBackground(scale: Int) -> CGImage? {
         CTLineDraw(line, ctx)
     }
 
-    caption("Drag SiekerCheck to Applications", y: 302, size: 15, emphasized: true,
+    caption("Drag Checkup to Applications", y: 302, size: 15, emphasized: true,
             color: CGColor(srgbRed: 0.24, green: 0.27, blue: 0.32, alpha: 1))
     caption("then open it from Launchpad or Spotlight", y: 328, size: 12, emphasized: false,
             color: CGColor(srgbRed: 0.48, green: 0.52, blue: 0.58, alpha: 1))

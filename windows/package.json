@@ -1,6 +1,6 @@
 {
-  "name": "siekercheck",
-  "productName": "SiekerCheck",
+  "name": "checkup",
+  "productName": "Checkup",
   "version": "1.0.0",
   "description": "Hardware checks for Windows PCs: screen, speakers, microphone, camera, keyboard, drives, battery, network.",
   "main": "main.js",
@@ -16,8 +16,8 @@
     "electron-builder": "^25.1.8"
   },
   "build": {
-    "appId": "com.sieker.siekercheck",
-    "productName": "SiekerCheck",
+    "appId": "com.checkup.app",
+    "productName": "Checkup",
     "files": [
       "main.js",
       "preload.js",
@@ -44,8 +44,8 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "SiekerCheck",
-      "artifactName": "SiekerCheck-Setup-${version}.exe"
+      "shortcutName": "Checkup",
+      "artifactName": "Checkup-Setup-${version}.exe"
     }
   },
   "allowScripts": {

@@ -1,4 +1,4 @@
-// SiekerCheck for Windows.
+// Checkup for Windows.
 //
 // The only OS-specific work lives here, behind IPC: WMI queries via PowerShell,
 // a disk speed test on the temp volume, and the plain Node facts. Everything
@@ -20,7 +20,7 @@ function createWindow() {
     height: 720,
     minWidth: 900,
     minHeight: 620,
-    title: 'SiekerCheck',
+    title: 'Checkup',
     backgroundColor: '#f4f5f7',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -70,7 +70,7 @@ function registerIpc() {
 
   ipcMain.handle('storage:benchmark', async (_event, megabytes) => {
     const size = Math.max(1, Number(megabytes) || 64) * 1000 * 1000;
-    const file = path.join(os.tmpdir(), 'siekercheck-speedtest.bin');
+    const file = path.join(os.tmpdir(), 'checkup-speedtest.bin');
 
     // A repeating pattern rather than zeros, so the read-back check means
     // something.

@@ -16,7 +16,7 @@ final class TrackpadCanvasView: NSView {
         pressureConfiguration = NSPressureConfiguration(pressureBehavior: .primaryGeneric)
     }
 
-    required init?(coder: NSCoder) { fatalError("SiekerCheck builds its views in code") }
+    required init?(coder: NSCoder) { fatalError("Checkup builds its views in code") }
 
     override func draw(_ dirtyRect: NSRect) {
         NSColor.textBackgroundColor.setFill()

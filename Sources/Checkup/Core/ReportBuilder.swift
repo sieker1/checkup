@@ -73,7 +73,7 @@ enum ReportBuilder {
 
     static func markdown(machine: MachineInfo, results: [CheckResult], date: Date = Date()) -> String {
         let formatter = ISO8601DateFormatter()
-        var out = "# SiekerCheck report\n\n"
+        var out = "# Checkup report\n\n"
         out += "- **Model:** \(machine.model)\n"
         out += "- **Chip:** \(machine.chip)\n"
         out += "- **macOS:** \(machine.osVersion)\n"

@@ -1,4 +1,4 @@
-# SiekerCheck
+# Checkup
 
 A Mac app for checking a MacBook's hardware by hand: screen, speakers,
 microphone, camera, keyboard, trackpad, battery, storage, haptics, network. Each
@@ -7,6 +7,8 @@ exports as a Markdown report.
 
 Built with the Swift compiler and macOS SDK that are already installed. No Xcode
 project, no package manager, no dependencies, no network service.
+
+![Checkup's overview screen](docs/screenshot-overview.png)
 
 ## Checks
 
@@ -36,9 +38,9 @@ counter.
 ```sh
 make check     # typecheck, lint the plist, assert the usage strings
 make test      # 58 logic checks
-make build     # compile and ad-hoc sign .build/SiekerCheck.app
+make build     # compile and ad-hoc sign .build/Checkup.app
 make install   # copy to ~/Applications and register it
-make dmg       # .build/SiekerCheck-1.0.dmg
+make dmg       # .build/Checkup-1.0.dmg
 make icon      # redraw the app icon
 ```
 
@@ -48,7 +50,7 @@ holds the microphone and camera permission grants.
 For a script or CI:
 
 ```sh
-.build/SiekerCheck.app/Contents/MacOS/SiekerCheck --list-checks
+.build/Checkup.app/Contents/MacOS/Checkup --list-checks
 ```
 
 prints the report for this machine and exits.
@@ -61,7 +63,7 @@ says it should be.
 ## Windows
 
 `windows/` holds the same checklist as an Electron app, packaged as an NSIS
-installer, `SiekerCheck-Setup-1.0.0.exe`. See [windows/README.md](windows/README.md)
+installer, `Checkup-Setup-1.0.0.exe`. See [windows/README.md](windows/README.md)
 for how to build it and for what has and has not been verified. It has not been
 run on Windows.
 

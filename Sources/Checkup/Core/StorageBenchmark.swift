@@ -10,10 +10,10 @@ enum StorageBenchmark {
         let verified: Bool
     }
 
-    /// Runs the benchmark in `directory`, defaulting to a SiekerCheck folder in
+    /// Runs the benchmark in `directory`, defaulting to a Checkup folder in
     /// the temporary directory. Returns nil if the file could not be written.
     static func run(megabytes: Int = 64, in directory: URL? = nil) -> Result? {
-        let target = directory ?? FileManager.default.temporaryDirectory.appendingPathComponent("SiekerCheck", isDirectory: true)
+        let target = directory ?? FileManager.default.temporaryDirectory.appendingPathComponent("Checkup", isDirectory: true)
         try? FileManager.default.createDirectory(at: target, withIntermediateDirectories: true)
         let file = target.appendingPathComponent("speedtest.bin")
         let byteCount = max(1, megabytes) * 1_000_000

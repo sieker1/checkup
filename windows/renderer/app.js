@@ -1,4 +1,4 @@
-// SiekerCheck renderer. Everything here uses browser APIs so it behaves the
+// Checkup renderer. Everything here uses browser APIs so it behaves the
 // same on Windows and, during development, anywhere else Electron runs.
 
 const CHECKS = [
@@ -26,7 +26,7 @@ const $ = (id) => document.getElementById(id);
 // browser - which is how most of it gets developed and checked - the OS-facing
 // calls report themselves unavailable instead of taking the whole page down.
 const unavailable = (what) => async () => ({ ok: false, error: what + ' needs the desktop app.' });
-const bridge = window.sieker || {
+const bridge = window.checkup || {
   systemInfo: async () => ({
     platform: 'browser', platformName: 'Browser', release: 'n/a', arch: 'n/a',
     hostname: location.host || 'local',
@@ -42,11 +42,11 @@ const bridge = window.sieker || {
 };
 
 let results = {};
-try { results = JSON.parse(localStorage.getItem('siekercheck.results') || '{}'); } catch { results = {}; }
+try { results = JSON.parse(localStorage.getItem('checkup.results') || '{}'); } catch { results = {}; }
 
 const statusOf = (id) => (results[id] && results[id].status) || 'Untested';
 const noteOf = (id) => (results[id] && results[id].note) || '';
-const save = () => localStorage.setItem('siekercheck.results', JSON.stringify(results));
+const save = () => localStorage.setItem('checkup.results', JSON.stringify(results));
 
 let current = 'overview';
 let guided = { active: false, index: 0 };
@@ -696,9 +696,10 @@ wire.network = () => {
   loadNetwork();
 };
 
-function loadNetwork() {
-  const rows = bridge.network();
-  $('net-list').innerHTML = rows.map((r) =>
+async function loadNetwork() {
+  // The bridge is an async IPC call, so this is a promise, not an array.
+  const rows = await bridge.network();
+  $('net-list').innerHTML = (rows || []).map((r) =>
     '<div class="k">' + r.name + ' \u2014 ' + r.family + '</div><div class="mono">' +
     r.address + (r.internal ? ' (internal)' : '') + '</div>').join('') ||
     '<div class="k">Interfaces</div><div>none reported</div>';
@@ -762,7 +763,7 @@ $('notes').addEventListener('input', (event) => {
 // Report -----------------------------------------------------------------
 
 function reportText() {
-  const lines = ['# SiekerCheck report', ''];
+  const lines = ['# Checkup report', ''];
   lines.push('**' + (systemSnapshot || 'Machine details unavailable') + '**');
   lines.push('');
   lines.push('| Check | Result | Notes |');

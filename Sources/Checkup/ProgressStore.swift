@@ -8,7 +8,7 @@ final class ProgressStore: ObservableObject {
     @Published private(set) var results: [CheckResult]
 
     private let defaults: UserDefaults
-    private let storageKey = "SiekerCheck.results.v1"
+    private let storageKey = "Checkup.results.v1"
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults

@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 @main
-struct SiekerCheckApp: App {
+struct CheckupApp: App {
     @StateObject private var progress = ProgressStore()
     @StateObject private var guided = GuidedSession()
 
@@ -23,7 +23,7 @@ struct SiekerCheckApp: App {
                 .environmentObject(guided)
         }
         .commands {
-            // SiekerCheck is a single-purpose test tool; a "New window" item would
+            // Checkup is a single-purpose test tool; a "New window" item would
             // only spawn a second copy of the checklist.
             CommandGroup(replacing: .newItem) {}
         }

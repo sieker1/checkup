@@ -1,4 +1,4 @@
-// The SiekerCheck mark, drawn with CoreGraphics.
+// The Checkup mark, drawn with CoreGraphics.
 //
 // A rounded-square "squircle" in the Big Sur idiom: a blue gradient field
 // carrying a white display outline with a check mark inside it, which is the

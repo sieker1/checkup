@@ -70,7 +70,7 @@ final class PixelCanvasView: NSView {
         super.viewDidMoveToWindow()
         // Name the first colour straight away so the very first frame is
         // labelled too, not only the ones reached by advancing.
-        window?.title = "SiekerCheck pixel test — \(PixelSequence.color(at: index).name)"
+        window?.title = "Checkup pixel test — \(PixelSequence.color(at: index).name)"
     }
 
     override func draw(_ dirtyRect: NSRect) {
@@ -92,7 +92,7 @@ final class PixelCanvasView: NSView {
 
     func advance() {
         index = PixelSequence.nextIndex(after: index)
-        window?.title = "SiekerCheck pixel test — \(PixelSequence.color(at: index).name)"
+        window?.title = "Checkup pixel test — \(PixelSequence.color(at: index).name)"
         needsDisplay = true
     }
 }

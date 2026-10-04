@@ -5,17 +5,17 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleExecutable</key>
-  <string>SiekerCheck</string>
+  <string>Checkup</string>
   <key>CFBundleIdentifier</key>
-  <string>com.sieker.siekercheck</string>
+  <string>com.checkup.app</string>
   <key>CFBundleIconFile</key>
-  <string>SiekerCheck</string>
+  <string>Checkup</string>
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleName</key>
-  <string>SiekerCheck</string>
+  <string>Checkup</string>
   <key>CFBundleDisplayName</key>
-  <string>SiekerCheck</string>
+  <string>Checkup</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>
@@ -29,9 +29,9 @@
   <key>NSPrincipalClass</key>
   <string>NSApplication</string>
   <key>NSMicrophoneUsageDescription</key>
-  <string>SiekerCheck records a short clip from your microphone so you can hear whether it works, then plays it back. Nothing is uploaded or kept after you quit.</string>
+  <string>Checkup records a short clip from your microphone so you can hear whether it works, then plays it back. Nothing is uploaded or kept after you quit.</string>
   <key>NSCameraUsageDescription</key>
-  <string>SiekerCheck shows a live camera preview so you can confirm the camera works. Nothing is recorded or uploaded.</string>
+  <string>Checkup shows a live camera preview so you can confirm the camera works. Nothing is recorded or uploaded.</string>
   <key>NSSupportsAutomaticGraphicsSwitching</key>
   <true/>
 </dict>
