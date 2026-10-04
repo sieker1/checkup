@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleExecutable</key>
+  <string>SiekerCheck</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.sieker.siekercheck</string>
+  <key>CFBundleIconFile</key>
+  <string>SiekerCheck</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>SiekerCheck</string>
+  <key>CFBundleDisplayName</key>
+  <string>SiekerCheck</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleVersion</key>
+  <string>1</string>
+  <key>LSMinimumSystemVersion</key>
+  <string>15.0</string>
+  <key>NSHighResolutionCapable</key>
+  <true/>
+  <key>NSPrincipalClass</key>
+  <string>NSApplication</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>SiekerCheck records a short clip from your microphone so you can hear whether it works, then plays it back. Nothing is uploaded or kept after you quit.</string>
+  <key>NSCameraUsageDescription</key>
+  <string>SiekerCheck shows a live camera preview so you can confirm the camera works. Nothing is recorded or uploaded.</string>
+  <key>NSSupportsAutomaticGraphicsSwitching</key>
+  <true/>
+</dict>
+</plist>
