@@ -58,6 +58,13 @@ can be edited and re-rendered instead of being hand-exported files. The icon
 generator samples its own output and fails if a pixel is not where the drawing
 says it should be.
 
+## Windows
+
+`windows/` holds the same checklist as an Electron app, packaged as an NSIS
+installer, `SiekerCheck-Setup-1.0.0.exe`. See [windows/README.md](windows/README.md)
+for how to build it and for what has and has not been verified. It has not been
+run on Windows.
+
 ## Limits
 
 - The signature is ad-hoc, so the app is for this Mac. Other Macs need

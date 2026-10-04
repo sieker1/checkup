@@ -1,0 +1,54 @@
+{
+  "name": "siekercheck",
+  "productName": "SiekerCheck",
+  "version": "1.0.0",
+  "description": "Hardware checks for Windows PCs: screen, speakers, microphone, camera, keyboard, drives, battery, network.",
+  "main": "main.js",
+  "author": "sieker",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.sieker.siekercheck",
+    "productName": "SiekerCheck",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "SiekerCheck",
+      "artifactName": "SiekerCheck-Setup-${version}.exe"
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}

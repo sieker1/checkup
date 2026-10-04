@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'">
+  <title>SiekerCheck</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <h1>SiekerCheck</h1>
+    <nav id="nav"></nav>
+    <div class="sidebar-foot">
+      <button id="run-all" class="primary">Run all checks</button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <header id="banner" hidden>
+      <span id="banner-step" class="step"></span>
+      <span id="banner-title" class="title"></span>
+      <span class="spacer"></span>
+      <button id="banner-back">Back</button>
+      <button id="banner-next" class="primary">Next check</button>
+      <button id="banner-exit">Exit</button>
+    </header>
+
+    <section id="panel" class="panel"></section>
+
+    <footer id="outcome">
+      <span class="label">Result</span>
+      <select id="result">
+        <option>Untested</option>
+        <option>Pass</option>
+        <option>Fail</option>
+        <option>N/A</option>
+      </select>
+      <input id="notes" type="text" placeholder="Notes for the report (optional)">
+    </footer>
+  </main>
+
+  <div id="pixel" hidden>
+    <span id="pixel-name"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
