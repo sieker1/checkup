@@ -10,6 +10,22 @@ project, no package manager, no dependencies, no network service.
 
 ![Checkup's overview screen](docs/screenshot-overview.png)
 
+## Download
+
+Take the latest build from the [releases page](https://github.com/sieker1/checkup/releases/latest):
+
+| Your machine | File | To install |
+| --- | --- | --- |
+| Mac with Apple Silicon | `Checkup-1.0.dmg` | Open the image and drag Checkup onto Applications |
+| Windows (64-bit) | `Checkup-Setup-1.0.0.exe` | Run it; it offers a folder and creates shortcuts |
+
+An Intel Mac can build its own copy from source with `make SWIFT_TARGET=x86_64-apple-macosx15.0`.
+
+Neither build is code-signed, so macOS asks for right-click then Open on the
+first launch, and Windows shows the SmartScreen prompt (More info, then Run
+anyway). Both are the same checklist; the Windows build has not been run on
+Windows yet, which [windows/README.md](windows/README.md) explains.
+
 ## Checks
 
 | Screen | What it does |
