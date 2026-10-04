@@ -5,17 +5,17 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleExecutable</key>
-  <string>Checkup</string>
+  <string>Fettle</string>
   <key>CFBundleIdentifier</key>
-  <string>com.checkup.app</string>
+  <string>com.fettle.app</string>
   <key>CFBundleIconFile</key>
-  <string>Checkup</string>
+  <string>Fettle</string>
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleName</key>
-  <string>Checkup</string>
+  <string>Fettle</string>
   <key>CFBundleDisplayName</key>
-  <string>Checkup</string>
+  <string>Fettle</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>
@@ -29,9 +29,9 @@
   <key>NSPrincipalClass</key>
   <string>NSApplication</string>
   <key>NSMicrophoneUsageDescription</key>
-  <string>Checkup records a short clip from your microphone so you can hear whether it works, then plays it back. Nothing is uploaded or kept after you quit.</string>
+  <string>Fettle records a short clip from your microphone so you can hear whether it works, then plays it back. Nothing is uploaded or kept after you quit.</string>
   <key>NSCameraUsageDescription</key>
-  <string>Checkup shows a live camera preview so you can confirm the camera works. Nothing is recorded or uploaded.</string>
+  <string>Fettle shows a live camera preview so you can confirm the camera works. Nothing is recorded or uploaded.</string>
   <key>NSSupportsAutomaticGraphicsSwitching</key>
   <true/>
 </dict>

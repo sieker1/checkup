@@ -19,7 +19,7 @@ final class MicRecorder: ObservableObject {
     private var meterTimer: Timer?
 
     private var fileURL: URL {
-        let dir = FileManager.default.temporaryDirectory.appendingPathComponent("Checkup", isDirectory: true)
+        let dir = FileManager.default.temporaryDirectory.appendingPathComponent("Fettle", isDirectory: true)
         try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
         return dir.appendingPathComponent("mic-test.m4a")
     }

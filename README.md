@@ -1,23 +1,24 @@
-# Checkup
+# Fettle
 
-A Mac app for checking a MacBook's hardware by hand: screen, speakers,
-microphone, camera, keyboard, trackpad, battery, storage, haptics, network. Each
-screen runs a live test and records a pass/fail result, and the whole checklist
-exports as a Markdown report.
+A hardware checklist you run yourself: screen, speakers, microphone, camera,
+keyboard, pointer, battery, storage, haptics, network. Each screen runs a live
+test and records a pass/fail result, and the whole checklist exports as a
+Markdown report.
 
-Built with the Swift compiler and macOS SDK that are already installed. No Xcode
-project, no package manager, no dependencies, no network service.
+The Mac build is a native Swift app, built with the Swift compiler and macOS SDK
+already on the machine: no Xcode project, no package manager, no dependencies, no
+network service. `windows/` holds the same checklist as an Electron app.
 
-![Checkup's overview screen](docs/screenshot-overview.png)
+![Fettle's overview screen](docs/screenshot-overview.png)
 
 ## Download
 
-Take the latest build from the [releases page](https://github.com/sieker1/checkup/releases/latest):
+Take the latest build from the [releases page](https://github.com/sieker1/fettle/releases/latest):
 
 | Your machine | File | To install |
 | --- | --- | --- |
-| Mac with Apple Silicon | `Checkup-1.0.dmg` | Open the image and drag Checkup onto Applications |
-| Windows (64-bit) | `Checkup-Setup-1.0.0.exe` | Run it; it offers a folder and creates shortcuts |
+| Mac with Apple Silicon | `Fettle-1.0.dmg` | Open the image and drag Fettle onto Applications |
+| Windows (64-bit) | `Fettle-Setup-1.0.0.exe` | Run it; it offers a folder and creates shortcuts |
 
 An Intel Mac can build its own copy from source with `make SWIFT_TARGET=x86_64-apple-macosx15.0`.
 
@@ -54,9 +55,9 @@ counter.
 ```sh
 make check     # typecheck, lint the plist, assert the usage strings
 make test      # 58 logic checks
-make build     # compile and ad-hoc sign .build/Checkup.app
+make build     # compile and ad-hoc sign .build/Fettle.app
 make install   # copy to ~/Applications and register it
-make dmg       # .build/Checkup-1.0.dmg
+make dmg       # .build/Fettle-1.0.dmg
 make icon      # redraw the app icon
 ```
 
@@ -66,7 +67,7 @@ holds the microphone and camera permission grants.
 For a script or CI:
 
 ```sh
-.build/Checkup.app/Contents/MacOS/Checkup --list-checks
+.build/Fettle.app/Contents/MacOS/Fettle --list-checks
 ```
 
 prints the report for this machine and exits.
@@ -79,7 +80,7 @@ says it should be.
 ## Windows
 
 `windows/` holds the same checklist as an Electron app, packaged as an NSIS
-installer, `Checkup-Setup-1.0.0.exe`. See [windows/README.md](windows/README.md)
+installer, `Fettle-Setup-1.0.0.exe`. See [windows/README.md](windows/README.md)
 for how to build it and for what has and has not been verified. It has not been
 run on Windows.
 

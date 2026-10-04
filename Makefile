@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-APP_NAME := Checkup
+APP_NAME := Fettle
 BUNDLE := .build/$(APP_NAME).app
 EXECUTABLE := $(BUNDLE)/Contents/MacOS/$(APP_NAME)
 # The newest Command Line Tools SDK can be newer than the installed swiftc,
@@ -18,13 +18,13 @@ FRAMEWORKS := -framework AppKit -framework SwiftUI -framework AVFoundation \
 	-framework CoreAudio -framework CoreMedia -framework IOKit \
 	-framework CoreGraphics -framework UniformTypeIdentifiers
 
-SOURCES := $(shell find Sources/Checkup -name '*.swift' | sort)
+SOURCES := $(shell find Sources/Fettle -name '*.swift' | sort)
 # The dependency-free slice that the headless test target compiles on its own.
-LOGIC_SOURCES := Sources/Checkup/Core/PixelSequence.swift \
-	Sources/Checkup/Core/ToneMath.swift \
-	Sources/Checkup/Core/KeyboardLayout.swift \
-	Sources/Checkup/Core/BatteryReport.swift \
-	Sources/Checkup/Core/ReportBuilder.swift
+LOGIC_SOURCES := Sources/Fettle/Core/PixelSequence.swift \
+	Sources/Fettle/Core/ToneMath.swift \
+	Sources/Fettle/Core/KeyboardLayout.swift \
+	Sources/Fettle/Core/BatteryReport.swift \
+	Sources/Fettle/Core/ReportBuilder.swift
 
 .PHONY: build run check test icon dmg-background dmg install uninstall clean
 

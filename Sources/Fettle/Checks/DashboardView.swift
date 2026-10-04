@@ -84,9 +84,9 @@ struct DashboardView: View {
 
     private func saveReport() {
         let panel = NSSavePanel()
-        panel.nameFieldStringValue = "Checkup-report.md"
+        panel.nameFieldStringValue = "Fettle-report.md"
         panel.allowedContentTypes = [.plainText]
-        panel.title = "Save Checkup report"
+        panel.title = "Save Fettle report"
         guard panel.runModal() == .OK, let url = panel.url else { return }
         do {
             try progress.markdownReport(machine: machine).write(to: url, atomically: true, encoding: .utf8)

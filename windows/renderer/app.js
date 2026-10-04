@@ -1,4 +1,4 @@
-// Checkup renderer. Everything here uses browser APIs so it behaves the
+// Fettle renderer. Everything here uses browser APIs so it behaves the
 // same on Windows and, during development, anywhere else Electron runs.
 
 const CHECKS = [
@@ -26,7 +26,7 @@ const $ = (id) => document.getElementById(id);
 // browser - which is how most of it gets developed and checked - the OS-facing
 // calls report themselves unavailable instead of taking the whole page down.
 const unavailable = (what) => async () => ({ ok: false, error: what + ' needs the desktop app.' });
-const bridge = window.checkup || {
+const bridge = window.fettle || {
   systemInfo: async () => ({
     platform: 'browser', platformName: 'Browser', release: 'n/a', arch: 'n/a',
     hostname: location.host || 'local',
@@ -42,11 +42,11 @@ const bridge = window.checkup || {
 };
 
 let results = {};
-try { results = JSON.parse(localStorage.getItem('checkup.results') || '{}'); } catch { results = {}; }
+try { results = JSON.parse(localStorage.getItem('fettle.results') || '{}'); } catch { results = {}; }
 
 const statusOf = (id) => (results[id] && results[id].status) || 'Untested';
 const noteOf = (id) => (results[id] && results[id].note) || '';
-const save = () => localStorage.setItem('checkup.results', JSON.stringify(results));
+const save = () => localStorage.setItem('fettle.results', JSON.stringify(results));
 
 let current = 'overview';
 let guided = { active: false, index: 0 };
@@ -351,7 +351,7 @@ builders.microphone = () => card('Record and play back',
   '<button id="mic-stop" disabled>Stop recording</button>' +
   '<button id="mic-play" disabled>Play back</button></div>' +
   '<p><span class="hint">Input level</span></p>' +
-  '<div class="bar" id="mic-bar"><i style="width:0%"></i></div>' +
+  '<div class="bar" id="mic-bar"><i></i></div>' +
   '<p class="hint" id="mic-state">Idle.</p>' +
   '<audio id="mic-audio" controls hidden></audio>') +
   card('What to listen for',
@@ -486,7 +486,7 @@ let testedKeys = new Set();
 
 builders.keyboard = () => {
   let html = '<p>Press each key in turn. Keys you have pressed turn green, so whatever ' +
-    'stays grey is not working.</p><div class="row" style="flex-direction:column;align-items:flex-start">';
+    'stays grey is not working.</p><div class="row keyboard-grid">';
   for (const row of KEY_ROWS) {
     html += '<div class="row">';
     for (const code of row) {
@@ -763,7 +763,7 @@ $('notes').addEventListener('input', (event) => {
 // Report -----------------------------------------------------------------
 
 function reportText() {
-  const lines = ['# Checkup report', ''];
+  const lines = ['# Fettle report', ''];
   lines.push('**' + (systemSnapshot || 'Machine details unavailable') + '**');
   lines.push('');
   lines.push('| Check | Result | Notes |');

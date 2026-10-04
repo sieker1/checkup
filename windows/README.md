@@ -1,4 +1,4 @@
-# Checkup for Windows
+# Fettle for Windows
 
 The same checklist as the Mac build, in an Electron app: screen colours,
 speakers, microphone, camera, keyboard, mouse, battery, drives and network, each
@@ -8,7 +8,7 @@ with a result that exports as a Markdown report.
 cd windows
 npm install
 npm start          # run it
-npm run dist       # build dist/Checkup-Setup-1.0.0.exe
+npm run dist       # build dist/Fettle-Setup-1.0.0.exe
 ```
 
 The installer chooses its own directory, adds a desktop and Start Menu
@@ -32,7 +32,7 @@ report themselves unavailable rather than taking the page down.
 This was built on a Mac, and that is the honest limit of it:
 
 - **Verified here:** every JavaScript file passes `node --check`; the produced
-  `Checkup-Setup-1.0.0.exe` is a genuine 64-bit PE32 Windows installer
+  `Fettle-Setup-1.0.0.exe` is a genuine 64-bit PE32 Windows installer
   containing the app files in its asar; and the whole interface was driven in a
   browser, including colour cycling with Escape to exit, the guided pass
   advancing screen by screen, the keyboard check marking keys as pressed, the

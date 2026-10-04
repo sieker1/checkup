@@ -123,12 +123,15 @@ button.primary:hover:not(:disabled) { background: #1a5fd0; border-color: #1a5fd0
 
 .card p { margin: 0 0 10px; color: var(--muted); }
 .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+/* The key rows have to stack; the CSP blocks inline style attributes, so this
+   cannot be written in the markup. */
+.row.keyboard-grid { flex-direction: column; align-items: flex-start; }
 
 .kv { display: grid; grid-template-columns: 200px 1fr; gap: 4px 12px; }
 .kv .k { color: var(--muted); }
 
 .bar { height: 14px; background: #e6eaf0; border-radius: 7px; overflow: hidden; }
-.bar > i { display: block; height: 100%; background: var(--ok); }
+.bar > i { display: block; height: 100%; width: 0; background: var(--ok); }
 .bar.hot > i { background: #d29922; }
 .bar.clip > i { background: var(--bad); }
 

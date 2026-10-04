@@ -92,7 +92,7 @@ final class CameraPreviewView: NSView {
         layer?.addSublayer(previewLayer)
     }
 
-    required init?(coder: NSCoder) { fatalError("Checkup builds its views in code") }
+    required init?(coder: NSCoder) { fatalError("Fettle builds its views in code") }
 
     override func layout() {
         super.layout()

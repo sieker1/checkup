@@ -21,7 +21,7 @@ struct RootView: View {
                 .tag(module)
             }
             .navigationSplitViewColumnWidth(min: 210, ideal: 230, max: 280)
-            .navigationTitle("Checkup")
+            .navigationTitle("Fettle")
         } detail: {
             VStack(spacing: 0) {
                 if guided.isActive {
@@ -29,7 +29,7 @@ struct RootView: View {
                     Divider()
                 }
                 detail
-                    .navigationTitle(guided.selection?.title ?? "Checkup")
+                    .navigationTitle(guided.selection?.title ?? "Fettle")
             }
         }
         .frame(minWidth: 900, minHeight: 620)

@@ -1,6 +1,6 @@
 import Foundation
 
-/// Dependency-free checks for Checkup's pure logic. These compile against the
+/// Dependency-free checks for Fettle's pure logic. These compile against the
 /// Core slice alone (no AppKit, no IOKit), so they run anywhere.
 @main
 struct LogicTests {

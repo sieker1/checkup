@@ -32,7 +32,7 @@ struct MicrophoneCheckView: View {
                     Text(mic.statusText).font(.callout).foregroundStyle(.secondary)
 
                     if let granted = mic.permissionGranted, !granted {
-                        Label("Microphone access is denied. Open System Settings › Privacy & Security › Microphone and enable Checkup.",
+                        Label("Microphone access is denied. Open System Settings › Privacy & Security › Microphone and enable Fettle.",
                               systemImage: "exclamationmark.triangle")
                             .foregroundStyle(.orange)
                             .fixedSize(horizontal: false, vertical: true)

@@ -1,6 +1,6 @@
 {
-  "name": "checkup",
-  "productName": "Checkup",
+  "name": "fettle",
+  "productName": "Fettle",
   "version": "1.0.0",
   "description": "Hardware checks for Windows PCs: screen, speakers, microphone, camera, keyboard, drives, battery, network.",
   "main": "main.js",
@@ -16,8 +16,8 @@
     "electron-builder": "^25.1.8"
   },
   "build": {
-    "appId": "com.checkup.app",
-    "productName": "Checkup",
+    "appId": "com.fettle.app",
+    "productName": "Fettle",
     "files": [
       "main.js",
       "preload.js",
@@ -44,8 +44,8 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Checkup",
-      "artifactName": "Checkup-Setup-${version}.exe"
+      "shortcutName": "Fettle",
+      "artifactName": "Fettle-Setup-${version}.exe"
     }
   },
   "allowScripts": {

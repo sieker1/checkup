@@ -3,7 +3,7 @@
 
 const { contextBridge, ipcRenderer } = require('electron');
 
-contextBridge.exposeInMainWorld('checkup', {
+contextBridge.exposeInMainWorld('fettle', {
   systemInfo: () => ipcRenderer.invoke('system:info'),
   storageBenchmark: (megabytes) => ipcRenderer.invoke('storage:benchmark', megabytes),
   battery: () => ipcRenderer.invoke('battery:info'),
